@@ -1,0 +1,16 @@
+POST campaigns/inter_camp
+{
+    "interaction_id":"2342344330gdf",
+    "audience":"Sport",
+    "tags": "football",
+    "advertiser":"Nike",
+    "publishers":"123",
+    "end_date":1447151962442,
+    "name":"shoes",
+    "slides":{
+        "slide_id":"112",
+        "title":"want shoes?",
+        "options":[ "yes", "no"]
+    },
+    "language":"english"
+}
