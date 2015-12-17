@@ -8,6 +8,7 @@ endDate
 name*?
 slides(list)
 language
+interaction_title*?
 
 Slide:
 id

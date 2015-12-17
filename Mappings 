@@ -1,0 +1,54 @@
+PUT campaigns/inter_camp/_mapping
+{
+    "inter_camp":{
+        "properties": {
+            "interaction_id":{
+                "type" : "string",
+                "index": "not_analyzed"
+            },
+            "audience":{
+                "type": "string",
+                "index": "not_analyzed"
+            },
+            "tags":{
+                "type": "string", 
+                "index": "not_analyzed"
+            },
+            "advertiser":{
+                "type": "string"
+            },
+            "publishers":{
+                "type": "string" 
+            },
+            "end_date":{
+                "type": "date"
+            },
+            "name":{
+                "type": "string"
+            },
+            "slides":{
+                "type": "nested", 
+                "properties":{
+                    "slide_id":{
+                        "type": "string"
+                    },
+                    "title":{
+                        "type": "string",
+                        "index_analyzer": "standard"
+                    },
+                    "options":{
+                        "type": "string",
+                        "index_analyzer": "standard"
+                    }
+                }
+            },
+            "language":{
+                "type": "string",
+                "index": "not_analyzed"
+            }
+        }
+    }
+}
+
+
+    
