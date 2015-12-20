@@ -15,16 +15,26 @@ PUT campaigns/inter_camp/_mapping
                 "index": "not_analyzed"
             },
             "advertiser":{
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
+
             },
             "publishers":{
-                "type": "string" 
+                "type": "string" ,
+                "index": "not_analyzed"
+
             },
             "end_date":{
                 "type": "date"
             },
             "name":{
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
+
+            },
+            "interaction_title":{
+                "type": "string",
+                "index_analyzer": "standard"
             },
             "slides":{
                 "type": "nested", 

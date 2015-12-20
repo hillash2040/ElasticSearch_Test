@@ -1,0 +1,40 @@
+GET _search
+{
+    "query": {
+        "bool": {
+            "should": [
+               {
+                   "match": {
+                       "publishers":{
+                        "query": "story.publishers",
+                        "minimum_should_match": 1
+                       }
+                   }},
+                   { "multi_match": {
+                       
+                        "query": "story.tags",
+                      "fields": ["audience","tags"]
+                       
+                   }},
+                   {
+                   "multi_match": {
+                            "query": "story.description",
+                      "fields": ["slides.title","name"                ,"slides.option"],
+                      "analyzer" : "snowball"
+                   }
+                                      
+               }
+            ]
+            ,
+            "must": [
+               {
+                   "match": {
+                      "language": {
+                          "query": "story.language"
+                      }
+                   }
+               }
+            ]
+        }
+    }
+}
