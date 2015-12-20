@@ -1,0 +1,69 @@
+POST campaigns/inter_camp
+{
+    "interaction_id":"2342344330gdf",
+    "audience":"Sport",
+    "tags": "football",
+    "advertiser":"Nike",
+    "publishers":"123",
+    "end_date":1447151962442,
+    "name":"shoes",
+    "slides":{
+        "slide_id":"112",
+        "title":"want shoes?",
+        "options":[ "yes", "no"]
+    },
+    "language":"english"
+}
+
+
+POST campaigns/inter_camp
+{
+    "interaction_id":"jfkhgsiu7438wer734f3hw",
+    "audience":["art and entertainment", "dance"],
+    "tags": "dance",
+    "advertiser":"Nike",
+    "publishers":"123",
+    "end_date":1447151962442,
+    "name":"dancing with the stars",
+    "slides":{
+        "slide_id":"112",
+        "title":"Was Jay a deserving champion?",
+        "options":[ "Yes! He's a brilliant dancer and has great chemistry with Aliona", "No - he underperformed in the final"]
+    },
+    "language":"english"
+}
+
+POST campaigns/inter_camp
+{
+    "interaction_id":"jfkhgsiu7438wer734f3hw",
+    "audience":["sport"]
+    "tags": "football",
+    "advertiser":"Nike",
+    "publishers":"123",
+    "end_date":1447151962442,
+    "name":"football news",
+    "slides":{
+        "slide_id":"112",
+        "title":"Is Louis van Gaal the right man for Manchester United ?",
+        "options":[ "Yes", "No"]
+    },
+    "language":"english"
+}
+
+
+POST campaigns/inter_camp
+{
+    "interaction_id":"jfkhgsiu7438wer734f3hw",
+    "audience”:["law, govt and politics", "terrorism"]
+    "tags": "army",
+    "advertiser":"Nike",
+    "publishers":"123",
+    "end_date":1447151962442,
+    "name":"Syria",
+    "slides":{
+        "slide_id":"112",
+        "title":"Airstrikes in Syria – The right decision?",
+        "options":[ "I don't agree with the air strikes", "I think air strikes are the best step forward", "I'm not sure"]
+    },
+    "language":"english"
+}
