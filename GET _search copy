@@ -81,3 +81,44 @@ GET _search
         }
     }
 }
+
+GET _search
+{
+    "query": {
+        "bool": {
+            "should": [
+               {
+                   "match": {
+                       "publishers":{
+                        "query": "123",
+                        "minimum_should_match": 1
+                       }
+                   }},
+                   { "multi_match": {
+                       
+                        "query": "world news",
+                      "fields": ["audience","tags"]
+                       
+                   }},
+                   {
+                   "multi_match": {
+                            "query": "So what do you think? Are you for or against the UK taking action in Syria? Use the online poll below to have your say.",
+                      "fields": ["slides.title","name"                ,"slides.option"],
+                      "analyzer" : "snowball"
+                   }
+                                      
+               }
+            ]
+            ,
+            "must": [
+               {
+                   "match": {
+                      "language": {
+                          "query": "english"
+                      }
+                   }
+               }
+            ]
+        }
+    }
+}

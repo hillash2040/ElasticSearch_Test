@@ -67,3 +67,26 @@ POST campaigns/inter_camp
     },
     "language":"english"
 }
+
+POST campaigns/inter_camp
+{
+   "interaction_id": "jfkhgsiu7438wer734f3hw",
+   "audience": [
+      "alcoholic beverages"
+   ],
+   "tags": "food and drinks",
+   "advertiser": "Nike",
+   "publishers": "123",
+   "end_date": 1447151962442,
+   "name": "Gin",
+   "slides": {
+      "slide_id": "112",
+      "title": "What is your tipple of choice?",
+      "options": [
+         "Gin – with tonic and a squeeze of lime.",
+         "Vodka. Neat.",
+         "I only drink things that sparkle."
+      ]
+   },
+   "language": "english"
+}
