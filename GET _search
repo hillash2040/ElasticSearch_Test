@@ -19,7 +19,7 @@ GET _search
                    {
                    "multi_match": {
                             "query": "The 'gin-assaisance' has seen the spirit grow in popularity among the younger generations but rum sales are dwindling",
-                      "fields": ["slides.title","name"                ,"slides.option"],
+                      "fields": ["slides.title","name","interaction_title"               ,"slides.option"],
                       "analyzer" : "snowball"
                    }
                                       
@@ -62,7 +62,7 @@ GET _search
                    {
                    "multi_match": {
                             "query": "Strictly Come Dancing: 14 things we learned as Jay McGuiness is crowned the 2015 winner. Plus, was Kellie Bright robbed on the night?",
-                      "fields": ["slides.title","name"                ,"slides.option"],
+                      "fields": ["slides.title","name","interaction_title"                 ,"slides.option"],
                       "analyzer" : "snowball"
                    }
                                       
@@ -103,7 +103,89 @@ GET _search
                    {
                    "multi_match": {
                             "query": "So what do you think? Are you for or against the UK taking action in Syria? Use the online poll below to have your say.",
-                      "fields": ["slides.title","name"                ,"slides.option"],
+                      "fields": ["slides.title","name","interaction_title"                ,"slides.option"],
+                      "analyzer" : "snowball"
+                   }
+                                      
+               }
+            ]
+            ,
+            "must": [
+               {
+                   "match": {
+                      "language": {
+                          "query": "english"
+                      }
+                   }
+               }
+            ]
+        }
+    }
+}
+
+GET _search
+{
+    "query": {
+        "bool": {
+            "should": [
+               {
+                   "match": {
+                       "publishers":{
+                        "query": "123",
+                        "minimum_should_match": 1
+                       }
+                   }},
+                   { "multi_match": {
+                       
+                        "query": "NHS",
+                      "fields": ["audience","tags"]
+                       
+                   }},
+                   {
+                   "multi_match": {
+                            "query": "This £1 billion change comes only weeks after George Osbourne announced the NHS Student Bursary, which costs the NHS an estimated £800 million, scheme would be cut.Jeremy Hunt, Secretary for Health claims that this change will improve medical treatment and patient experience.Currently access to wifi inside NHS building is inconsistent – with some hospitals charging for access and others not providing Wi-Fi access at all.NHS officials believe this change will force NHS trusts to update their in-house technology and make use of tools such as eObs, ePrescribing and the use of wireless monitors.",
+                      "fields": ["slides.title","name","interaction_title"               ,"slides.option"],
+                      "analyzer" : "snowball"
+                   }
+                                      
+               }
+            ]
+            ,
+            "must": [
+               {
+                   "match": {
+                      "language": {
+                          "query": "english"
+                      }
+                   }
+               }
+            ]
+        }
+    }
+}
+
+GET _search
+{
+    "query": {
+        "bool": {
+            "should": [
+               {
+                   "match": {
+                       "publishers":{
+                        "query": "123",
+                        "minimum_should_match": 1
+                       }
+                   }},
+                   { "multi_match": {
+                       
+                        "query": ["The Apprentice", "reality"],
+                      "fields": ["audience","tags"]
+                       
+                   }},
+                   {
+                   "multi_match": {
+                            "query": "To no one's great surprise Joseph Valente became the winner of The Apprentice 2015.",
+                      "fields": ["slides.title","name","interaction_title"               ,"slides.option"],
                       "analyzer" : "snowball"
                    }
                                       

@@ -7,6 +7,7 @@ POST campaigns/inter_camp
     "publishers":"123",
     "end_date":1447151962442,
     "name":"shoes",
+    "interaction_title":"nike shoes",
     "slides":{
         "slide_id":"112",
         "title":"want shoes?",
@@ -25,6 +26,7 @@ POST campaigns/inter_camp
     "publishers":"123",
     "end_date":1447151962442,
     "name":"dancing with the stars",
+    "interaction_title":"dancing with the stars",
     "slides":{
         "slide_id":"112",
         "title":"Was Jay a deserving champion?",
@@ -36,12 +38,13 @@ POST campaigns/inter_camp
 POST campaigns/inter_camp
 {
     "interaction_id":"jfkhgsiu7438wer734f3hw",
-    "audience":["sport"]
+    "audience":["sport"],
     "tags": "football",
     "advertiser":"Nike",
     "publishers":"123",
     "end_date":1447151962442,
     "name":"football news",
+    "interaction_title": "Louis van Gaal for Manchester United",
     "slides":{
         "slide_id":"112",
         "title":"Is Louis van Gaal the right man for Manchester United ?",
@@ -54,12 +57,13 @@ POST campaigns/inter_camp
 POST campaigns/inter_camp
 {
     "interaction_id":"jfkhgsiu7438wer734f3hw",
-    "audience”:["law, govt and politics", "terrorism"]
+    "audience":["law, govt and politics", "terrorism"],
     "tags": "army",
     "advertiser":"Nike",
     "publishers":"123",
     "end_date":1447151962442,
     "name":"Syria",
+        "interaction_title": "Airstrikes in Syria",
     "slides":{
         "slide_id":"112",
         "title":"Airstrikes in Syria – The right decision?",
@@ -79,6 +83,7 @@ POST campaigns/inter_camp
    "publishers": "123",
    "end_date": 1447151962442,
    "name": "Gin",
+    "interaction_title": "Gin",
    "slides": {
       "slide_id": "112",
       "title": "What is your tipple of choice?",
@@ -89,4 +94,58 @@ POST campaigns/inter_camp
       ]
    },
    "language": "english"
+}
+
+POST campaigns/inter_camp
+{
+    "interaction_id":"jfkhgsiu7438wer734f3hw",
+    "audience":"magic and illustion",
+    "tags": "movies",
+    "advertiser":"Nike",
+    "publishers":"123",
+    "end_date":1447151962442,
+    "name":"Take OPLIN's holiday poll",
+    "interaction_title": "Take OPLIN's holiday poll",
+    "slides":{
+        "slide_id":"112",
+        "title":"You're on the holodeck, and you're stuck in gangster gun battle. Do you:",
+        "options":[ "Put on the One Ring, and sneak away invisibly", "Cut a hole in the wall with your lightsaber", "Cast Expelliarmus to disarm your enemies","Call Karl, because he can fix anything"]
+    },
+    "language":"english"
+}
+
+POST campaigns/inter_camp
+{
+    "interaction_id":"jfkhgsiu7438wer734f3hw",
+    "audience":["sport"],
+    "tags": ["sport","ping pong"],
+    "advertiser":"Nike",
+    "publishers":"123",
+    "end_date":1447151962442,
+    "name": "tenis poll",
+    "interaction_title":"WHO WILL BE REMEMBERED AS THE PING PONG CHAMPION OF 2015?",
+    "slides":{
+        "slide_id":"112",
+        "title":"Should Haan/Hixson v Trevis happen over the noon hour?",
+        "options":[ "Yes", "No", "How about another time."]
+    },
+    "language":"english"
+}
+
+POST campaigns/inter_camp
+{
+    "interaction_id":"2342344330gdf",
+    "audience":["movies and tv", "reality"],
+    "tags": ["The Apprentice", "TV"],
+    "advertiser":"Nike",
+    "publishers":"123",
+    "end_date":1447151962442,
+    "name":"The Apprentice winner",
+    "interaction_title":"Did Lord Sugar choose the right business partner?",
+    "slides":{
+        "slide_id":"112",
+        "title":"Did Lord Sugar choose the right business partner?",
+        "options":[ "Yes, Joseph was consistent throughout the process", "No, I would download Vana's DatePlay app"]
+    },
+    "language":"english"
 }
