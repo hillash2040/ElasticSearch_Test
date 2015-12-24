@@ -10,7 +10,7 @@ PUT campaigns/inter_camp/_mapping
                 "type": "string",
                 "index": "not_analyzed"
             },
-            "tags":{
+            “interaction_tags":{
                 "type": "string", 
                 "index": "not_analyzed"
             },
@@ -39,7 +39,7 @@ PUT campaigns/inter_camp/_mapping
             "slides":{
                 "type": "nested", 
                 "properties":{
-                    "slide_id":{
+                    "id":{
                         "type": "string"
                     },
                     "title":{

@@ -19,7 +19,7 @@ GET _search
                    {
                    "multi_match": {
                             "query": "story.description",
-                      "fields": ["slides.title","name"                ,"slides.option"],
+                      "fields": ["slides.title","name”,”interaction_title”                ,"slides.option"],
                       "analyzer" : "snowball"
                    }
                                       
